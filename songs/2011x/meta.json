@@ -1,9 +1,15 @@
 {
-	"displayName": "Tutorial",
-	"bpm": 100.0,
-	"icon": "gf",
+	"customValues": {},
 	"color": "#9271FD",
-	"coopAllowed": true,
 	"opponentModeAllowed": true,
-	"needsVoices": false
+	"icon": "gf",
+	"difficulties": [
+		"hard"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "2011x",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 130
 }

@@ -1,0 +1,66 @@
+{
+	"events": [
+		{
+			"params": [
+				false,
+				2,
+				"camGame",
+				4,
+				"quad",
+				"InOut",
+				"direct",
+				false
+			],
+			"time": 0,
+			"name": "Camera Zoom"
+		},
+		{
+			"params": [
+				-100,
+				0,
+				true,
+				4,
+				"quad",
+				"InOut",
+				true
+			],
+			"time": 0,
+			"name": "Camera Position"
+		},
+		{
+			"params": [
+				false,
+				1,
+				"camGame",
+				4,
+				"linear",
+				"In",
+				"direct",
+				false
+			],
+			"time": 923.076923076923,
+			"name": "Camera Zoom"
+		},
+		{
+			"params": [
+				0,
+				false,
+				4,
+				"CLASSIC",
+				"In"
+			],
+			"time": 923.076923076923,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				2,
+				1,
+				"BEAT",
+				0
+			],
+			"time": 923.076923076923,
+			"name": "Camera Modulo Change"
+		}
+	]
+}
