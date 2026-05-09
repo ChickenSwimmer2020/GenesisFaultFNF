@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="start.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="idle0000" x="0" y="0" width="690" height="267" frameX="2" frameY="2" frameWidth="686" frameHeight="263"/>
+	<SubTexture name="hover0000" x="0" y="267" width="690" height="267" frameX="2" frameY="2" frameWidth="686" frameHeight="263"/>
+</TextureAtlas>

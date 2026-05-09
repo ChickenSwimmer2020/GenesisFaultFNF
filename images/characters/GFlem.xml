@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GFlem.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="GF Dance Left0000" x="2812" y="0" width="703" height="661" frameX="-189" frameY="-157" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0001" x="703" y="1345" width="707" height="661" frameX="-187" frameY="-157" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0002" x="707" y="2010" width="707" height="660" frameX="-187" frameY="-158" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0003" x="703" y="2670" width="703" height="660" frameX="-189" frameY="-158" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0004" x="2109" y="0" width="703" height="664" frameX="-189" frameY="-154" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0005" x="2109" y="664" width="703" height="664" frameX="-189" frameY="-154" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0006" x="0" y="1345" width="703" height="665" frameX="-189" frameY="-153" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0007" x="703" y="0" width="703" height="673" frameX="-189" frameY="-145" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0008" x="703" y="0" width="703" height="673" frameX="-189" frameY="-145" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0009" x="703" y="0" width="703" height="673" frameX="-189" frameY="-145" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0010" x="0" y="0" width="703" height="673" frameX="-189" frameY="-145" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0011" x="0" y="0" width="703" height="673" frameX="-189" frameY="-145" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0012" x="0" y="0" width="703" height="673" frameX="-189" frameY="-145" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0013" x="0" y="673" width="703" height="672" frameX="-189" frameY="-146" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Left0014" x="0" y="673" width="703" height="672" frameX="-189" frameY="-146" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0000" x="0" y="2670" width="703" height="660" frameX="-189" frameY="-158" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0001" x="0" y="2010" width="707" height="660" frameX="-187" frameY="-158" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0002" x="1414" y="2010" width="707" height="660" frameX="-187" frameY="-158" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0003" x="2812" y="1983" width="703" height="660" frameX="-189" frameY="-158" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0004" x="2812" y="661" width="703" height="661" frameX="-189" frameY="-157" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0005" x="2812" y="1322" width="703" height="661" frameX="-189" frameY="-157" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0006" x="2109" y="1328" width="703" height="663" frameX="-189" frameY="-155" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0007" x="703" y="673" width="703" height="671" frameX="-189" frameY="-147" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0008" x="703" y="673" width="703" height="671" frameX="-189" frameY="-147" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0009" x="703" y="673" width="703" height="671" frameX="-189" frameY="-147" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0010" x="1406" y="670" width="703" height="670" frameX="-189" frameY="-148" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0011" x="1406" y="670" width="703" height="670" frameX="-189" frameY="-148" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0012" x="1406" y="670" width="703" height="670" frameX="-189" frameY="-148" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0013" x="1406" y="0" width="703" height="670" frameX="-189" frameY="-148" frameWidth="1102" frameHeight="972"/>
+	<SubTexture name="GF Dance Right0014" x="1406" y="0" width="703" height="670" frameX="-189" frameY="-148" frameWidth="1102" frameHeight="972"/>
+</TextureAtlas>

@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/testing/" name="gaycode">
+	<sprite x="-709.034596397211" sprite="h.png" y="-478.911053832973" type="none" scalex="7.56501487152343" scaley="6.35794291719835" name="sprite_4"/>
+	<sprite x="1605" sprite="g" y="-504" type="none" scalex="2.38" angle="-1.43" scaley="3.49" name="sprite_3"/>
+	<sprite x="-331.647426904466" sprite="Symbol 1" y="141.685521949978" type="none" scale="4.08800914605177" name="sprite_5"/>
+	<sprite x="-450.000119274669" sprite="Symbol 3" y="1320.00010078111" type="none" scalex="6.6816327504283" scaley="4.49794280156834" name="sprite_6"/>
+	<girlfriend x="235.184302610272"/>
+	<dad x="-724.078486948617" y="231.179840779579"/>
+	<boyfriend x="1213.99338222817" y="106.727185540441"/>
+</stage>

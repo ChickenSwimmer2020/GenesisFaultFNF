@@ -1,0 +1,16 @@
+{
+    "name": "BrightnessChange",
+    "description": "Change the brightness of a character (dad/bf/gf or custom).",
+    "parameters": [
+        {
+            "name": "Target",
+            "type": "string",
+            "default": "dad"
+        },
+        {
+            "name": "Brightness",
+            "type": "float",
+            "default": 1.0
+        }
+    ]
+}

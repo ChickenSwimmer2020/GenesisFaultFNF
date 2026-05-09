@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="GFlem" icon="gf" color="#A5004D">
+	<anim name="idle" anim="" x="237" y="195" loop="true"/>
+</character>
