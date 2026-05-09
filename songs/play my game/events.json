@@ -1,1 +1,37 @@
-{"events":[{"params":[0],"time":5287.65978330582,"name":"Camera Movement"},{"params":[1],"time":5287.65978330582,"name":"Camera Movement"},{"params":[0],"time":5287.65978330582,"name":"Camera Movement"}]}
+{
+	"events": [
+		{
+			"params": [
+				0,
+				true,
+				4,
+				"CLASSIC",
+				"In"
+			],
+			"time": 5287.65978330582,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				1,
+				true,
+				4,
+				"CLASSIC",
+				"In"
+			],
+			"time": 5287.65978330582,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				0,
+				true,
+				4,
+				"CLASSIC",
+				"In"
+			],
+			"time": 5287.65978330582,
+			"name": "Camera Movement"
+		}
+	]
+}
