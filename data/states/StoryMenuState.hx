@@ -5,7 +5,7 @@ var customWindowY:Int = 200;
 function create()
 {
      positionWindowCentered();   
-    trace("Custom Desktop Main Menu Loaded.");
+    
 
     originalWidth = Lib.application.window.width;
     originalHeight = Lib.application.window.height;
