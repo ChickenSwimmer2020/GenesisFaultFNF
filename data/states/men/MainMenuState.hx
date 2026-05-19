@@ -1,4 +1,8 @@
 import openfl.Lib;
+import funkin.options.OptionsMenu;
+import haxe.io.Path;
+import sys.FileSystem;
+import openfl.display.BitmapData;
 import Sys;
 
 var tvBG:FlxSprite;
@@ -18,9 +22,27 @@ var originalHeight:Int = 720;
 var customWindowX:Int = 640;   
 var customWindowY:Int = 200;
 
-function create()
-{
+final wallpaperPath:String = 'C:/Users/'+Sys.environment()["USERNAME"]+'/AppData/Roaming/Microsoft/Windows/Themes/TranscodedWallpaper';
+
+function attemptToMakeDesktopBG():FlxSprite {
+    trace('attempting to get Windows Desktop Background\nFrom: ' + wallpaperPath);
+    if(FileSystem.exists(wallpaperPath)) {
+        trace('got wallpaper!');
+        var theBitmapData = BitmapData.fromFile(wallpaperPath);
+        var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(theBitmapData);
+        bg.setGraphicSize(350, 350);
+        bg.updateHitbox();
+        return bg;
+    }else{
+        return new FlxSprite(0, 0).makeGraphic(350, 350, 0xFF008080); //default if the wallpaper couldnt be found.
+    }
+
+    return null;
+}
+
+function create() {
     trace("Custom Desktop Main Menu Loaded.");
+
 
     originalWidth = Lib.application.window.width;
     originalHeight = Lib.application.window.height;
@@ -35,6 +57,20 @@ function create()
     tvBG.screenCenter();
     tvBG.scale.set(2, 2);
     add(tvBG);
+
+    var winBG:FlxSprite = attemptToMakeDesktopBG();
+    if(winBG==null) {
+        trace("Failed to get Windows Desktop Background");
+    }else{
+        add(winBG);
+        winBG.screenCenter();
+        winBG.setGraphicSize(winBG.width*1.618, winBG.height*1.6);
+        winBG.x+=0.5;
+        winBG.y+=4;
+
+        winBG.shader = new CustomShader("desktop", 330);
+    }
+
 
     exeApp = createApp("exeApp", 400, 180, 2.0);
     setApp = createApp("setApp", 600, 120, 2.0);
@@ -138,10 +174,10 @@ function openApp(app:FlxSprite)
         FlxG.switchState(new StoryMenuState());
     else if (app == setApp)
         FlxG.switchState(new OptionsMenu());
-    else if (app == noApp)
-    {
-        var creditsPath:String = Sys.getCwd() + "mods/GenesisFaultFNF-main/data/credits.txt";
-        Sys.command('start "" "' + creditsPath + '"');
+    else if (app == noApp) {
+        var modspath:String = StringTools.replace(Paths.getAssetsRoot(), ".", "");
+        var creditsPath:String = Sys.getCwd() + (modspath.substr(1, modspath.length-1)) + '/data/credits.txt'; //this sould work hopefully for everybody.
+        Sys.command('notepad.exe "' + creditsPath + '"');
     }
 }
 
