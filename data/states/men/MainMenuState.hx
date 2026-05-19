@@ -33,13 +33,12 @@ function attemptToMakeDesktopBG():FlxSprite {
         bg.setGraphicSize(350, 350);
         bg.updateHitbox();
         return bg;
-    }else{
-        return new FlxSprite(0, 0).makeGraphic(350, 350, 0xFF008080); //default if the wallpaper couldnt be found.
     }
-
     return null;
 }
 
+var winBG:FlxSprite;
+var shade:FlxSprite;
 function create() {
     trace("Custom Desktop Main Menu Loaded.");
 
@@ -58,9 +57,14 @@ function create() {
     tvBG.scale.set(2, 2);
     add(tvBG);
 
-    var winBG:FlxSprite = attemptToMakeDesktopBG();
+    shade = new FlxSprite(0, 0).loadGraphic(Paths.image("MENUSCREEN/shade"));
+    winBG = attemptToMakeDesktopBG();
     if(winBG==null) {
         trace("Failed to get Windows Desktop Background");
+        shade.screenCenter();
+        shade.setGraphicSize(350*1.618, 350*1.6);
+        shade.x+=0.5;
+        shade.y+=4;
     }else{
         add(winBG);
         winBG.screenCenter();
@@ -69,8 +73,14 @@ function create() {
         winBG.y+=4;
 
         winBG.shader = new CustomShader("desktop", 330);
-    }
 
+        shade.setPosition(winBG.x, winBG.y);
+        shade.setGraphicSize(350*1.618, 350*1.6);
+        shade.updateHitbox();
+        shade.x-=108;
+        shade.y-=105;
+    }
+    add(shade);
 
     exeApp = createApp("exeApp", 400, 180, 2.0);
     setApp = createApp("setApp", 600, 120, 2.0);
@@ -170,15 +180,33 @@ function checkAppClick()
 
 function openApp(app:FlxSprite)
 {
-    if (app == exeApp)
-        FlxG.switchState(new StoryMenuState());
-    else if (app == setApp)
-        FlxG.switchState(new OptionsMenu());
-    else if (app == noApp) {
-        var modspath:String = StringTools.replace(Paths.getAssetsRoot(), ".", "");
-        var creditsPath:String = Sys.getCwd() + (modspath.substr(1, modspath.length-1)) + '/data/credits.txt'; //this sould work hopefully for everybody.
-        Sys.command('notepad.exe "' + creditsPath + '"');
+    switch(app) {
+        case exeApp: doAnim();
+        case setApp: FlxG.switchState(new OptionsMenu());
+        case noApp:
+            var modspath:String = StringTools.replace(Paths.getAssetsRoot(), ".", "");
+            var creditsPath:String = Sys.getCwd() + (modspath.substr(1, modspath.length-1)) + '/data/credits.txt'; //this sould work hopefully for everybody.
+            Sys.command('notepad.exe "' + creditsPath + '"');
+        default: trace("Unknown app.");
     }
+}
+
+function doAnim() {
+    highlightBox.alpha = 0; //soft-disable it.
+    for(app in [setApp, noApp]) {
+        FlxTween.tween(app, {alpha: 0}, 0.5, {ease: FlxEase.expoOut});
+    }
+    FlxTween.tween(exeApp, {x: (FlxG.width/2-exeApp.width/2), y: (FlxG.height/2-exeApp.height/2)}, 0.5, {ease: FlxEase.expoOut, onComplete:(_)->{
+        FlxTween.tween(tvBG, {"scale.x": (FlxG.width/tvBG.frameWidth)*2, "scale.y": (FlxG.height/tvBG.frameHeight)*4}, 0.375, {ease: FlxEase.expoIn, startDelay: 0.375});
+        if(winBG!=null) {
+            FlxTween.tween(winBG, {"scale.x": ((winBG.width*4)/winBG.frameWidth)*2, "scale.y": (FlxG.height/winBG.frameHeight)*4}, 0.375, {ease: FlxEase.expoIn, startDelay: 0.375});
+        }
+        FlxTween.tween(shade, {"scale.x": ((shade.width*4)/shade.frameWidth)*2, "scale.y": (FlxG.height/shade.frameHeight)*4}, 0.375, {ease: FlxEase.expoIn, startDelay: 0.375});
+
+        FlxTween.tween(exeApp, {alpha: 0, "scale.x": 9, "scale.y": 9}, 0.75, {ease: FlxEase.expoIn, onComplete:(_)->{
+            FlxG.switchState(new StoryMenuState());
+        }});
+    }});
 }
 
 function onDestroy()
